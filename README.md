@@ -1,6 +1,6 @@
 # landmulti
 
-Executable codes of the statistical manuscript:
+Executable codes of the manuscript:
 
 "Enhancing Long-term Survival Prediction with Multiple Short-term Events: Landmarking with A Flexible Varying Coefficient Model"
 
