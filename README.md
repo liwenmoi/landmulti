@@ -9,10 +9,10 @@ Executable codes of the statistical manuscript:
 2. HelperFunctions.R: helper functions that are used in main.R.
 
 3. mydata.csv: example data file that contains columns:
-                                        (1) time: long-term survival time	
-                                        (2) outcome: binary censoring indicator with 0 indicates censoring and 1 indicates event
-                                        (3) st1: event time for short-term outcome 1
-                                        (4) st2: event time for short-term outcome 2	
-                                        (5) age: continuous covariate, age
-                                        (6) ID: subject id
+                                        (1) time: long-term survival time; 
+                                        (2) outcome: binary censoring indicator with 0 indicates censoring and 1 indicates event; 
+                                        (3) st1: event time for short-term outcome 1; 
+                                        (4) st2: event time for short-term outcome 2; 
+                                        (5) age: continuous covariate, age; 
+                                        (6) ID: subject id.
 
