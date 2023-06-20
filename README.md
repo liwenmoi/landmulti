@@ -10,15 +10,15 @@ Executable codes of the statistical manuscript:
 
 3. mydata.csv: example data file that contains columns:
    
-                                        (1) time: long-term survival time;
+                                        (1) time: long-term survival time, Y;
    
-                                        (2) outcome: binary censoring indicator with 0 indicates censoring and 1 indicates event;
+                                        (2) outcome: binary censoring indicator with 0 indicates censoring and 1 indicates event, \delta;
    
-                                        (3) st1: event time for short-term outcome 1;
+                                        (3) st1: event time for short-term outcome 1, S1;
    
-                                        (4) st2: event time for short-term outcome 2;
+                                        (4) st2: event time for short-term outcome 2, S2;
    
-                                        (5) age: continuous covariate, age;
+                                        (5) age: continuous covariate, age, X;
    
                                         (6) ID: subject id.
 
