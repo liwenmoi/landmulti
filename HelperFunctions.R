@@ -1,30 +1,3 @@
-
-# data generating function
-data_gen=function(N,eta1,mu1,sd1,eta2,mu2,sd2,mu3,sd3,mu_X, sd_X,C1,C2, eta3, eta4,eta5, eta6, eta7 ){
-  X=rnorm(N,mu_X,sd_X)
-  epsilon1=rnorm(N,mu1,sd1)
-  epsilon2=rnorm(N,mu2,sd2)
-  epsilon3=rnorm(N,mu3,sd3)
-  S1=exp(-eta1*X+epsilon1)
-  S2=exp(-eta2*X+epsilon2)
-
-  Tt=exp(-eta3*X+eta4*log(S1)+eta5*log(S2)-eta6*X*log(S1)-eta7*X*log(S2)+epsilon3)
-  C=rweibull(n=N,shape=C1,scale=C2)
-  Y=pmin(Tt, C)
-  delta=(Tt<=C)*1
-
-  XS1=pmin(S1, Tt, C)
-  XS2=pmin(S2, Tt, C)
-  deltaS1=ifelse(S1==XS1,1,0)
-  deltaS2=ifelse(S2==XS2,1,0)
-
-  obs_data=as.data.frame(cbind(Y, delta, XS1, deltaS1, XS2, deltaS2, X))
-  obs_data$id=seq(1,N,1)
-  ful_data=as.data.frame(cbind(Tt, C, S1, S2, Y, delta, XS1, deltaS1, XS2, deltaS2, X))
-  ful_data$id=seq(1,N,1)
-  return(list(obs_data=obs_data, ful_data=ful_data))
-}
-
 # some auxiliary functions
 s1 <- function(x) x
 s2 <- function(x) x
