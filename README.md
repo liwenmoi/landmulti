@@ -8,7 +8,7 @@ Executable codes of the manuscript:
 
 2. HelperFunctions.R: helper functions that are used in main.R.
 
-3. mydata.csv: example data file that contains columns:
+3. simulated.data1.csv: example data file that contains columns:
    
                                         (1) time: long-term survival time, Y;
    
