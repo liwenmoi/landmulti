@@ -20,12 +20,6 @@ source("HelperFunctions.R")
 sim_data <- read.csv("simulated.data1.csv",  header = TRUE)
 
 
-grid1 = seq(0.01, 5, length.out=5)
-grid2 = seq(0.01, 5, length.out=5)
-grid3 = list(seq(0.01, 5, length.out=5),
-             seq(0.01, 5, length.out=5))
-
-
 # 1. the following computes the coefficient estimates for group 1,
 # for group 2 at s1 = 3, for group 3 at s2 = 3,
 # and for group 4 at (s1, s2) = (3, 3).
