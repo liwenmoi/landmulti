@@ -592,14 +592,18 @@ multipred <- function(data, formula, t0, L,
 
   pos_s1 <- grep("s1", names(mf))
   pos_s2 <- grep("s2", names(mf))
-  pos_delta <- grep("delta", names(mf))
+  # pos_delta <- grep("delta", names(mf))
 
   XS1 <- mf[[pos_s1]]
   XS2 <- mf[[pos_s2]]
-  delta <- mf[[pos_delta]]
-  Y <- mf[[1]]
-  X <- mf[-c(1, pos_s1, pos_s2, pos_delta)]
-  Xnames <- names(mf)[-c(1, pos_s1, pos_s2, pos_delta)]
+
+  delta <- mf[[1]][,2]
+
+  Y <- mf[[1]][,1]
+  X <- mf[-c(1, pos_s1, pos_s2)]
+
+  Xnames <- names(mf)[-c(1, pos_s1, pos_s2)]
+
   mydata <- as.data.frame(cbind(Y, delta, XS1, XS2, X))
 
   mydata$what=Wi.FUN(data=mydata, t0=t0, tau=L, weight.given=NULL)
