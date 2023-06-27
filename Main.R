@@ -17,7 +17,7 @@ library(snow)
 source("HelperFunctions.R")
 
 # read in the example data set
-mydata <- read.csv("simulated.data1.csv",  header = TRUE)[,-1]
+mydata <- read.csv("simulated.data1.csv",  header = TRUE)
 
 
 grid1 = seq(0.01, 5, length.out=5)
